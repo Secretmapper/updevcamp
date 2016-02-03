@@ -23,7 +23,7 @@
     {{end}}
 
     <ul>
-    {{ range .Data.Pages }}
+    {{ range .Data.Pages.ByDate }}
         <li>
           <a href="{{.Permalink}}">
             {{ .LinkTitle }}
@@ -37,6 +37,20 @@
         </li>
     {{end}}
     </ul>
+
+  <h1>Projects</h1>
+
+  <div class="gallery">
+    {{ range $.Site.Data.projects }}
+      <div class="gallery-item">
+        <a href="{{ .url }}">
+          <img src="{{ .img }}"/>
+          {{ .name }}
+        </a>
+        <p>by: {{ .nick }}</p>
+      </div>
+    {{ end }}
+  </div>
 
 </div>
 {{ partial "footer.html" . }}

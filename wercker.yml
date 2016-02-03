@@ -6,7 +6,8 @@ build:
     - hgen/gulp:
        tasks: deploy
     - arjen/hugo-build:
-        version: 0.14
+        disable_pygments: true
+        version: "0.15"
 deploy:
   steps:
     - lukevivier/gh-pages@0.2.1:
