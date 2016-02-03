@@ -1,0 +1,7 @@
+nick: "carl"
+name: "Carl Angelo A. Araya"
+image:
+  profile: "carl.jpg"
+pos: "CSI Development Commitee Head 16-17 (jokelang)"
+bio: "likes to learn new shiz. vim is lyf"
+skills: ["ruby_on_rails", "vim", "php"]
