@@ -7,6 +7,8 @@ mentors = ["arian", "dominic", "francis", "stephen", "toph", "carl", "marc", "bl
 
 Spend a semester writing code and learning more about software and product development! Accepted students work on a project (of their own choosing) paired with a mentor, becoming a part of the larger development community.
 
+[Answer the form here](http://goo.gl/forms/f6B35MrBy8)
+
 __FAQ:__
 
 - How does it work?
