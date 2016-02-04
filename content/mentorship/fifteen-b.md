@@ -32,3 +32,7 @@ __FAQ:__
 - How do I get paired with a mentor? What if more than one camper picks the same mentor?
 
     The pairing will be done depending on the interest, specialty, and schedule of the mentor/mentee pair. To ensure the quality of mentorship, a mentor can only have one mentee.
+
+- Is DevCamp a CSI recruiting program?
+
+    No. If you are interested in becoming a CSI member, please go through the [application process](http://apps.updevcamp.com)
