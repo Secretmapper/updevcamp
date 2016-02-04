@@ -13,7 +13,7 @@ __FAQ:__
 
 - How does it work?
 
-    Work on a project/Increase your skills in a field your interested in like web, mobile, or game development by working with a mentor that specializes on that field.
+    Work on a project/Increase your skills in a field you're interested in like web, mobile, or game development by working with a mentor that specializes in that field.
 
     The project can be anything, from an idea or project you have to an open source project you want to contribute on.
 
@@ -27,9 +27,9 @@ __FAQ:__
 
 - Where/When does it occur?
 
-    The 1-on-1 mentorship setup allows us to hold the devcamp without a centralized location/time, so you are free to work with your mentor on terms that works for both of you!
+    The 1-on-1 mentorship setup allows us to hold the devcamp without a centralized location/time, so you are free to work with your mentor on terms that work for both of you!
 
-    However, we do sometimes hold _common sessions_, where we discuss essential things that would be common to whatever field you are studying. They are typically held in discussion rooms and will depend on the participants' availability.
+    However, sometimes we do hold _common sessions_, where we discuss essential things that would be common to whatever field you are studying. They are typically held in discussion rooms and will depend on the participants' availability.
 
 - How do I get paired with a mentor? What if more than one camper picks the same mentor?
 
