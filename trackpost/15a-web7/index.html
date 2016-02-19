@@ -1,0 +1,533 @@
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us"><head><link href="http://gmpg.org/xfn/11" rel="profile"><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1"><title>Javascript</title><link rel="stylesheet" href="/css/main.css"> <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png"><link href="/favicon.png" rel="icon"><link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'><link href="http://fonts.googleapis.com/css?family=Roboto+Slab:300" rel="stylesheet" type="text/css"><link href="" rel="alternate" type="application/rss+xml" title="UP CSI Devcamp &middot; " /><meta name="description" content="CSI Devcamp provides a space and network for motivated students to learn and create awesome stuff"><meta name="keywords" content="Devcamp, UP, CSI, Computer, Science, UP CSI Devcamp, Bootcamp, Mentorship, Mentor, Mentee"> </head><body> <header><h1><a href="/"><span class="color-csi">UP CSI</span> Devcamp</a></h1><nav><ul><li> <a href="/resources">Resources</a></li><li> <a href="/tracks">Tracks</a></li></ul></nav></header><div class="main-wrapper">   <div class="content container"><article class="post"> <h1 class="post-title"> <a href="/tracks/web">Web</a> Track: Javascript</h1> <span class="post-by"> by: <span class="author-name"><a class="label" href="/authors/mireya">Mireya Gen Andres</a></span> </span> <h1>Table of Contents</h1><div class="toc"> <nav id="TableOfContents">
+<ul>
+<li><a href="#background:51edb0bb45e55ba24d5b8a75643e295b">Background</a></li>
+<li><a href="#getting-started:51edb0bb45e55ba24d5b8a75643e295b">Getting Started</a></li>
+<li><a href="#javascript-as-a-language:51edb0bb45e55ba24d5b8a75643e295b">Javascript as a Language</a>
+<ul>
+<li><a href="#hello-world:51edb0bb45e55ba24d5b8a75643e295b">Hello World!</a></li>
+<li><a href="#back-to-basics:51edb0bb45e55ba24d5b8a75643e295b">Back to Basics</a></li>
+</ul></li>
+<li><a href="#dom-manipulation:51edb0bb45e55ba24d5b8a75643e295b">DOM Manipulation</a>
+<ul>
+<li><a href="#nothing-wrong-with-vanilla:51edb0bb45e55ba24d5b8a75643e295b">Nothing Wrong With Vanilla</a></li>
+<li><a href="#jquery-magic:51edb0bb45e55ba24d5b8a75643e295b">jQuery Magic</a></li>
+</ul></li>
+<li><a href="#pokemon-game:51edb0bb45e55ba24d5b8a75643e295b">Pokemon Game</a>
+<ul>
+<li><a href="#menus:51edb0bb45e55ba24d5b8a75643e295b">Menus</a></li>
+<li><a href="#pikachu-used-tackle:51edb0bb45e55ba24d5b8a75643e295b">Pikachu used TACKLE!</a></li>
+<li><a href="#it-s-super-effective:51edb0bb45e55ba24d5b8a75643e295b">&hellip; It&rsquo;s super effective!</a></li>
+</ul></li>
+<li><a href="#final-notes:51edb0bb45e55ba24d5b8a75643e295b">Final Notes</a></li>
+</ul>
+</nav></div>  
+
+<h1 id="background:51edb0bb45e55ba24d5b8a75643e295b">Background</h1>
+
+<p>Javascript is a fun language. It&rsquo;s powerful, versatile, but sometimes misunderstood. It&rsquo; s an <strong>object-oriented dynamic language</strong>, and it&rsquo;s commonly used for making web applications interactive (although js frameworks have become popular recently, such as AngularJS and EmberJS).</p>
+
+<p>Check out <a href="http://hereistoday.com/">this</a> website and notice how it&rsquo;s not just some static HTML document. You can click on the timeline (the colored rectangles) and the website reacts and changes depending on your actions <em>without refreshing the page</em>. <strong>That</strong> is the power of javascript.</p>
+
+<p>Some brief history: javascript was created by this engineer from Netscape called Brendan Eich. It was released in 1996. It was originally <em>Mocha</em>, then it was called <em>LiveScript</em>, and eventually it was named <em>Javascript</em> when Netscape and Sun got together. It was supposed to be a complementary scripting language for Java, but it has evolved a lot on its own as a language. And despite the name, js doesn&rsquo;t really have much to do with the Java language.</p>
+
+<p>So don&rsquo;t worry; if you don&rsquo;t know how to code in Java, you&rsquo;ll be fine.</p>
+
+<h1 id="getting-started:51edb0bb45e55ba24d5b8a75643e295b">Getting Started</h1>
+
+<p>Some knowledge of HTML is needed for this tutorial. If you&rsquo;re not familiar with how HTML works, check out the HTML tutorial <a href="http://updevcamp.com/trackpost/15a-web1/">here</a> then come back to this later. Grab a few snacks while you&rsquo;re at it; we&rsquo;re in for a pretty long ride and we don&rsquo;t want you to work on an empty stomach!</p>
+
+<p>You good to go? Are you comfortable in your spot? Great! Let&rsquo;s get started.</p>
+
+<p>First, clone this <a href="https://github.com/mpandres/pokemon-js">repository</a> and check out the readme. This is the same repository we used for the DevCamp session last November 7. If you cloned this before, update it by running <code>git pull</code> from your local repository. Comments have been added to the code since then to make things easier to follow.</p>
+
+<h1 id="javascript-as-a-language:51edb0bb45e55ba24d5b8a75643e295b">Javascript as a Language</h1>
+
+<h2 id="hello-world:51edb0bb45e55ba24d5b8a75643e295b">Hello World!</h2>
+
+<p>First we&rsquo;ll take a look at the <code>basic javascript</code> folder from the repository.</p>
+
+<p>Unlike with Flask, there&rsquo;s no setup needed for JS. You can simply create a javascript file by adding the <code>.js</code> extension. Let&rsquo;s make one now.</p>
+
+<p>Open up a blank file using your favorite text editor and save it as <code>scripts.js</code> (or whatever you want to name it). Type the following code in your file:</p>
+
+<pre><code class="language-javascript">alert('Hello World!');
+console.log('Javascript FTW!');
+</code></pre>
+
+<p>Now open <code>dummy.html</code> in your text editor and add the following code inside the <code>&lt;body&gt;</code> tag:</p>
+
+<pre><code class="language-html"> &lt;script src=&quot;scripts.js&quot;&gt;&lt;/script&gt;
+</code></pre>
+
+<p>This links your js script to your HTML document. If you open <code>dummy.html</code> in your browser, you&rsquo;ll find that a dialogue box has popped up with the message &ldquo;Hello World!&rdquo;. This is what the <code>alert()</code> function does in javascript.</p>
+
+<p>Close the dialogue box. You&rsquo;ll find that the document is completely blank - as expected, since we left the body without any HTML elements. But where did our &ldquo;Javascript FTW!&rdquo; message go? Well now let&rsquo;s try checking out the <code>console</code>. Right-click and select <code>Inspect Element</code>, then go to the <code>console</code> tab. You should now see the &ldquo;Javascript FTW!&rdquo; message printed.</p>
+
+<p>Pretty neat; now we&rsquo;ll be able to print messages without affecting what&rsquo;s shown in our HTML document or having annoying dialogue boxes popping up using the <code>console.log()</code> function. This is useful for inspecting data, so keep this function in mind when you&rsquo;re trying to debug your code.</p>
+
+<p>Sweet, so now we&rsquo;ve done the obligatory <code>Hello World</code> example customary for programming languages. Pat yourself in the back and have a bite of that snack you took.</p>
+
+<h2 id="back-to-basics:51edb0bb45e55ba24d5b8a75643e295b">Back to Basics</h2>
+
+<p>Now let&rsquo;s look at <code>backtobasics.js</code> prepared by Marc Teves. It&rsquo;s a tutorial on the basic syntax of javascript. Link this to your HTML file and refresh the page, then check the console tab. The code is pretty straightforward and is sufficiently explained through the comments. Try to follow the code and familiarize yourself with the syntax - in many ways, it&rsquo;s similar to other languages like C.</p>
+
+<p>As a quick recap from last session, here are some important concepts to know about how javascript works:
+* All number arithmetic is handled as floating point arithmetic.
+* <code>null</code> is a special javascript literal which means <em>empty</em> i.e. no object value is present. Null means there is a non-value.
+* <code>undefined</code>, on the other hand, means that the value is uninitialized. It means that no value has been assigned yet.
+* When we add a string to the equation, the <code>+</code> operator becomes a concatenator.
+* Javascript arrays can have elements of different types. (e.g. <code>array = [1, 2, &quot;abcd&quot;, 8.91]</code>).
+* Objects can have <code>attributes</code> and <code>methods</code> (functions). You can initialize an object from the get go, or use a <code>constructor</code>, which are templates for an object.
+* Functions are objects too! This means you can pass them as a parameter to other functions. Pretty cool.</p>
+
+<p>This is a lot to take in, but the <code>backtobasics.js</code> file goes through all of these one by one in detail. Go through that, then come back once you&rsquo;re done.</p>
+
+<p>As an additonal reference, check out the MDN&rsquo;s <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/A_re-introduction_to_JavaScript">js tutorial</a>, which gives a quick overview of how javascript works. It&rsquo;s a bit lengthy, so I suggest you go through this at another time. :)</p>
+
+<h1 id="dom-manipulation:51edb0bb45e55ba24d5b8a75643e295b">DOM Manipulation</h1>
+
+<p>Whew! That was a lot to take in. Still hanging in there? Why don&rsquo;t you rest for a minute, refill your drink, and grab some more snacks before we proceed. Check out this <a href="https://www.youtube.com/watch?v=Q9c8FJ19yVE&amp;list=PLASUEILIKieb8Jpwcri6fQphSw4wPavMc&amp;index=26">penguin video</a> while you&rsquo;re at it.</p>
+
+<p>All done? Great! Now let&rsquo;s get to the fun part.</p>
+
+<p>So far we&rsquo;ve done some pretty basic stuff - mostly learning how to code in javascript. But we haven&rsquo;t actually touched any of the <em>magic</em> javascript offers us, so let&rsquo;s do that by creating our own Pokemon game!</p>
+
+<h2 id="nothing-wrong-with-vanilla:51edb0bb45e55ba24d5b8a75643e295b">Nothing Wrong With Vanilla</h2>
+
+<p>One of the most fun features of javascript is that it allows us to manipulate the DOM, or the Document Object Model. When we have an HTML file, we can represent it as a raw text file, or as what we see here in our browsers. But another way of representing HTML files (and also XML files) is through the DOM, which provides a structured (object-oriented) way for other programs and scripts to access and manipulate elements in the document.</p>
+
+<p>That is, using javascript we can access certain HTML elements through the DOM and modify them without having to reload the page every time. How cool is that?</p>
+
+<p>If you want to skip this section and get straight to the code, you can use <code>dom.js</code> from the repository as a reference.</p>
+
+<p>To get started, we&rsquo;ll work on the <code>/pokemon</code> folder from the repository. Ignore the folders for now and just open <code>pokemon.html</code> in your text editor. Make sure that all the scripts in the <code>&lt;head&gt;</code> tag are commented out except for the following:</p>
+
+<pre><code class="language-html">&lt;script language=&quot;javascript&quot; type=&quot;text/javascript&quot; src=&quot;js/jquery.min.js&quot;&gt;&lt;/script&gt;
+&lt;script language=&quot;javascript&quot; type=&quot;text/javascript&quot; src=&quot;js/jquery-ui/jquery-ui.min.js&quot;&gt;&lt;/script&gt;
+</code></pre>
+
+<p>We&rsquo;ll get into what these scripts do later. For now just ignore them.</p>
+
+<p>Open <code>pokemon.html</code> in your browser. You should see a static page of a simulated pokemon battle with Pikachu as your pokemon and Ratata as your opponent. The bottom screen should only have the green pokeball background and should be empty of buttons. Get yourself familiar with the elements of the page before we proceed. If things are confusing, right-click and select <code>Inspect Element</code> then hover over each line, which will highlight the corresponding element in the browser.</p>
+
+<p>Now let&rsquo;s try changing the elements without touching the HTML document. First create a new file in the <code>/js</code> folder (let&rsquo;s call this <code>dom.js</code>) and link this in the <code>&lt;head&gt;</code> tag:</p>
+
+<pre><code class="language-html">&lt;script language=&quot;javascript&quot; type=&quot;text/javascript&quot; src=&quot;js/dom.js&quot;&gt;&lt;/script&gt;
+</code></pre>
+
+<p>In <code>dom.js</code>, we&rsquo;ll add the following code:</p>
+
+<pre><code class="language-javascript">window.onload = init;
+
+function init(){
+  // insert code here
+}
+</code></pre>
+
+<p>We&rsquo;ll put most of our code in the <code>init</code> function. What this does is that it makes sure the browser loads ALL of the HTML elements before running our script. We want to make sure that the elements are <em>there</em> before we can even manipulate them.</p>
+
+<p>Now let&rsquo;s get to the magic. To manipulate elements, we need to be able to <em>get</em> them first. Add the following inside the <code>init()</code> function:</p>
+
+<pre><code class="language-javascript">var opponent = document.getElementById('opponent-name');
+</code></pre>
+
+<p>Here we&rsquo;re <em>getting</em> the HTML element with the id of <code>#opponent-name</code> and putting it in the variable <code>opponent</code> so that our script will be able to use it. <code>#opponent-name</code> is a <code>&lt;div&gt;</code> in the HTML file with the text &ldquo;RATATA&rdquo;. Let&rsquo;s change that to something else:</p>
+
+<pre><code class="language-javascript">opponent.innerHTML = &quot;RATATATATATATATA&quot;;
+</code></pre>
+
+<p><code>innerHTML</code> is the text property of an HTML element. So now we&rsquo;re changing our opponent&rsquo;s name from &ldquo;RATATA&rdquo; to &ldquo;RATATATATATATATA&rdquo;. Refresh the page in your browser and you&rsquo;ll see that, indeed, we are no longer fighting &ldquo;RATATA&rdquo; but &ldquo;RATATATATATATATA&rdquo;!</p>
+
+<p>Now let&rsquo;s try another trick.</p>
+
+<pre><code class="language-javascript">var name = document.getElementById('pokemon-name');
+var last_name = document.createTextNode(' Pikapi');
+name.appendChild(last_name);
+</code></pre>
+
+<p>There are several things going on here. We&rsquo;re <em>getting</em> the name of our pokemon (in the HTML file this is the <code>&lt;div&gt;</code> with the text &ldquo;PIKACHU&rdquo;) and putting it in the <code>name</code> variable. Now the second line is a bit different. Instead of <em>getting</em> an element, we are now <em>creating</em> an element - specifically a TextNode with the string &ldquo; Pikapi&rdquo;. <em>Yes, javascript just created an HTML element</em>. Pretty neat. But now we have to add this to our pokemon name so that instead of &ldquo;PIKACHU&rdquo; we&rsquo;ll have the pokemon &ldquo;PIKACHU Pikapi&rdquo;. So now we use <code>appendChild()</code> to do that.</p>
+
+<p>Refresh the page again and voila! We are now having a fight between &ldquo;PIKACHU Pikapi&rdquo; and &ldquo;RATATATATATATATA&rdquo;!</p>
+
+<h2 id="jquery-magic:51edb0bb45e55ba24d5b8a75643e295b">jQuery Magic</h2>
+
+<p>We&rsquo;ve done some interesting stuff so far with vanilla javascript. We&rsquo;re able to select elements from an HTML file, create our <em>own</em> HTML elements, and manipulate them. But typing all these long methods will get pretty stale (imagine typing <code>document.getElementById()</code> over and over and over and over&hellip; <em>ugh</em>). Is there some way to make coding easier?</p>
+
+<p>Naturally some people have already tackled this problem before and made a convenient solution for us, and that is jQuery! jQuery is basically a javascript library; you can think of it as third-party javascript file that we&rsquo;ll import into our HTML document. It has some shortcut methods and additional neat goodies - mostly functions that a lot of people use so that there&rsquo;s no need to reinvent the wheel. Why code something when it&rsquo;s already been done before by someone else and you can use it for free?</p>
+
+<p>In our HTML file, we&rsquo;ve already imported jQuery and jQuery UI so there&rsquo;s no need to set it up. You can find the files in the <code>/js</code> folder.</p>
+
+<pre><code class="language-html">&lt;script language=&quot;javascript&quot; type=&quot;text/javascript&quot; src=&quot;js/jquery.min.js&quot;&gt;&lt;/script&gt;
+&lt;script language=&quot;javascript&quot; type=&quot;text/javascript&quot; src=&quot;js/jquery-ui/jquery-ui.min.js&quot;&gt;&lt;/script&gt;
+</code></pre>
+
+<p>Fire up another javascript file (or use the old one and just comment out our previous code - ALL of it) and add the following:</p>
+
+<pre><code class="language-javascript">$(function(){
+});
+</code></pre>
+
+<p>This is the jQuery equivalent of our <code>init</code> function from before. The <code>$</code> sign is shortcut for <code>jQuery</code>, so technically the code above is the same as this one:</p>
+
+<pre><code class="language-javascript">jQuery.(function(){
+});
+</code></pre>
+
+<p>&hellip; but nobody codes like that because that&rsquo;s five more characters to type. <code>$</code> is just so much more convenient.</p>
+
+<p>Let&rsquo;s trying manipulating an element like we did before using vanilla javascript. Add the following inside the function:</p>
+
+<pre><code class="language-javascript">var name = $('#pokemon-name');
+name.html('MIREYA');
+</code></pre>
+
+<p>Huh, the code seems shorter now, doesn&rsquo;t it? But it&rsquo;s really the same thing as the one above. It&rsquo;s equivalent code in vanilla javascript is this:</p>
+
+<pre><code class="language-javascript">var name = document.getElementById('pokemon-name');
+name.innerHTML = 'MIREYA';
+</code></pre>
+
+<p>So to select an element, just use <code>$()</code> and add the id or class selector inside (so you can also have something like <code>$('.class')</code>). The <code>innerHTML</code> property can be changed using the <code>.html()</code> method. You can also get the current <code>innerHTML</code> by setting the parameters blank, like so:</p>
+
+<pre><code class="language-javascript">console.log(name.html());
+</code></pre>
+
+<p>Now refresh the page and you&rsquo;ll see that we&rsquo;ve changed the text just like before - only this time with less characters! Yay for open source and faster coding!</p>
+
+<p>Let&rsquo;s now try manipulating other properties:</p>
+
+<pre><code class="language-javascript">var img = $('#pokemon-sprite');
+img.attr('src', 'assets/back/squirtle.png');
+</code></pre>
+
+<p>A general way of changing an element&rsquo;s attribute is by using the <code>attr()</code> method, which accepts two parameters: the attribute name, and the final value you want it to be in. So here we&rsquo;re changing our pokemon&rsquo;s sprite from pikachu to squirtle. Reload the page the see the results!</p>
+
+<h1 id="pokemon-game:51edb0bb45e55ba24d5b8a75643e295b">Pokemon Game</h1>
+
+<p>We&rsquo;ve gone through a lot, but now we&rsquo;re ready to make the actual game! Yay! If you made it this far, smile, eat something you like, give yourself a pat on the back and say, &ldquo;Good job, self!&rdquo; You deserve it!</p>
+
+<p>This is the final sprint. For this tutorial, we&rsquo;ll make our pokemon attack the opponent and add visual feedback. Our opponent will shake whenever it is attacked, it&rsquo;s HP bar will diminish and change in color for every damage it takes, and the sprite will eventually vanish once the opponent&rsquo;s HP reaches zero. We&rsquo;ll also have our pokemon do a victory pose for a job well done.</p>
+
+<p>If you want to skip this section and get straight to the code, you can use <code>pokebattle.js</code> as a reference. Comments have been added to explain what&rsquo;s going on so it should be easy to follow.</p>
+
+<p>As stated from the readme of this repository: we will not be able to simulate the actual game wherein both you and the opponent take turns in attacking. This requires some gamedev concepts which are outside the scope of this tutorial, and will be left as an exercise to the interested coder. If you&rsquo;re curious, you can shoot me a message on how this can be done. I&rsquo;ve also provided additional assets (from spriters-resource) should you want to take this a bit further.</p>
+
+<h2 id="menus:51edb0bb45e55ba24d5b8a75643e295b">Menus</h2>
+
+<p>First let&rsquo;s clean up the code a bit. In <code>pokemon.html</code> make sure that all the scripts in the <code>&lt;head&gt;</code> tag are commented out except for the following:</p>
+
+<pre><code class="language-html">&lt;script language=&quot;javascript&quot; type=&quot;text/javascript&quot; src=&quot;js/jquery.min.js&quot;&gt;&lt;/script&gt;
+&lt;script language=&quot;javascript&quot; type=&quot;text/javascript&quot; src=&quot;js/jquery-ui/jquery-ui.min.js&quot;&gt;&lt;/script&gt;
+</code></pre>
+
+<p>Add another script:</p>
+
+<pre><code class="language-html">&lt;script language=&quot;javascript&quot; type=&quot;text/javascript&quot; src=&quot;js/pokebattle_base.js&quot;&gt;&lt;/script&gt;
+</code></pre>
+
+<p>and open up <code>pokebattle_base.js</code> in your text editor. As you can see, I&rsquo;ve already added some code for you so we can quickly get our hands dirty.</p>
+
+<p>A quick run through of what we have so far:
+* We&rsquo;ve got two constructors: <code>move</code> and <code>moveObject</code>. <code>move</code> refers to the logical moves of a pokemon, while <code>moveObject</code> refers to the actual HTML elements representing those moves. I made these as constructors because I need to create several of these objects (since a pokemon has 4 moves).
+* Each attribute in the <code>trainer</code> object refers to the corresponding element in the html file. So <code>trainer.name</code> refers to the <code>&lt;div&gt;</code> with &ldquo;PIKACHU&rdquo; and <code>trainer.hpBar</code> refers to the green HP bar.
+* <code>img</code> and <code>altImg</code> are shortcut links to the pokemon assets.
+* Notice that we used the <code>move</code> constructor in the <code>trainer</code> object as well.
+* <code>opponent</code> object is the same as <code>trainer</code>, except that <code>hpRemaining</code> and <code>hpTotal</code> are numbers instead of references to HTML elements, since we don&rsquo;t actually see the opponent&rsquo;s HP in the game except for the HP bar.
+* <code>menu</code> refers to the main menu, which consists of a <code>fight</code>, <code>bag</code>, <code>pokemon</code>, and <code>cancel</code> button.
+* <code>fight</code> refers to the fight menu, which consists of 4 buttons for each pokemon move (here we used the <code>moveObject</code> constructor), and 1 <code>cancel</code> button.
+* For both objects above, <code>main</code> refers to the <code>&lt;div&gt;</code> enclosing the buttons for that menu.</p>
+
+<p>Take your time to familiarize yourself with the objects first. There&rsquo;a a lot to take in.</p>
+
+<p>All done? Great!</p>
+
+<p>Now if you look at the page in your browser, you&rsquo;ll notice that although we have a main menu and fight menu, they are nowhere to be seen! That&rsquo;s because both of them are set to <code>display: none;</code>. Try commenting this out from <code>.menu</code> in <code>style.css</code>, or you can just uncheck the property using <code>Inspect Element</code>. Now we&rsquo;re able to see the menu!</p>
+
+<p>But we don&rsquo;t want to be able to do that by touching the HTML file, so set <code>display</code> back to <code>none</code> and let&rsquo;s try manipulating <code>.menu</code> with javascript instead.</p>
+
+<p>Let&rsquo;s make the menu appear:</p>
+
+<pre><code class="language-javascript">menu.main.css('display', 'block');
+</code></pre>
+
+<p>This is vanilla javascript that sets the css from <code>display: none;</code> to <code>display: block;</code>. Try refreshing the page and you&rsquo;ll see that we now have a nice menu to play with.</p>
+
+<p>We&rsquo;ll need to switch frequently between the main menu and the fight menu, so let&rsquo;s create functions for that.</p>
+
+<pre><code class="language-javascript">function switchToFight() {
+  menu.main.hide(); 
+  fight.main.show();
+}
+</code></pre>
+
+<p>Here we used jQuery instead of vanilla js. The equivalent vanilla js code is this:</p>
+
+<pre><code class="language-javascript">function switchToFight() {
+  menu.main.css('display', 'none');
+  fight.main.css('display', 'block');
+}
+</code></pre>
+
+<p>&hellip; but that&rsquo;s too many characters to type with, so we&rsquo;ll just go with jQuery on this one. :P It&rsquo;s also easier to read (it&rsquo;s almost like english!)</p>
+
+<p>Of course, we also need to be able to switch to the other menu so let&rsquo;s do that:</p>
+
+<pre><code class="language-javascript">function switchToMenu(){
+  fight.main.hide();
+  menu.main.show();
+}
+</code></pre>
+
+<p>Now let&rsquo;s actually use these functions using the <code>click()</code> event:</p>
+
+<pre><code class="language-javascript">menu.fight.click(function(){
+  switchToFight();
+});
+</code></pre>
+
+<p>This means that if we click the FIGHT button in the main menu, we&rsquo;ll switch to the fight menu.</p>
+
+<p>Conversely, if we click the CANCEL button in the fight menu, we should be able to switch to the main menu via:</p>
+
+<pre><code class="language-javascript">fight.cancel.click(function(){
+  switchToMenu();
+});
+</code></pre>
+
+<p>Reload the page and try clicking the FIGHT button in the main menu, then the CANCEL button in the fight menu. You should now be able to easily switch between menus without reloading the page to get these changes to show up!</p>
+
+<h2 id="pikachu-used-tackle:51edb0bb45e55ba24d5b8a75643e295b">Pikachu used TACKLE!</h2>
+
+<p>Now let&rsquo;s try actually attacking our opponent.</p>
+
+<p>We&rsquo;ll only be able to attack our opponent if we click a move image (one of the four purple boxes in the fight menu), so let&rsquo;s do that:</p>
+
+<pre><code class="language-javascript">fight.move1.img.click(function(){
+  playerAttack();
+
+  // decreases logical pp of the move
+  trainer.move1.remaining--;
+  
+  // manipulates the html element to show the decrese in pp
+  fight.move1.pp.html(trainer.move1.remaining + '/' + trainer.move1.total);
+});
+
+function playerAttack() {
+  // pikachu attacks ratata
+}
+
+</code></pre>
+
+<p>We have four moves so it would be quite redundant if we had to code the attack block four times, so let&rsquo;s just create a function called <code>attack()</code> in the <code>trainer</code> object.</p>
+
+<p>Let&rsquo;s go back up and add the following code to <code>trainer</code>:</p>
+
+<pre><code class="language-javascript">// in trainer object
+move4: new move('SAND ATTACK', 25, 25, 1),
+
+// trainer attacks the victim with the specified damage
+attack: function(victim, dmg){
+  victim.hpRemaining = victim.hpRemaining - dmg;
+  if(victim.hpRemaining &lt; 0){
+    victim.hpRemaining = 0;
+  }
+
+  console.log(hpRemaining);
+},
+
+</code></pre>
+
+<p>Here we&rsquo;ll set a parameter called <code>victim</code> which will later be filled out by our <code>opponent</code> object. Let&rsquo;s finish up the code by calling this in the <code>playerAttack()</code> function:</p>
+
+<pre><code class="language-javascript">fight.move1.img.click(function(){
+  playerAttack(opponent, trainer.move1.damage);
+  trainer.move1.remaining--;
+  fight.move1.pp.html(trainer.move1.remaining + '/' + trainer.move1.total);
+});
+
+function playerAttack(opponent, damage) {
+  trainer.attack(opponent, damage);
+}
+
+</code></pre>
+
+<p>Reload the page and try attacking Ratata. Clearly he&rsquo;s taking damage, as we can see in the console logs. But there&rsquo;s no visual feedback! Let&rsquo;s remedy this by having the HP bar diminish for each hit. Let&rsquo;s go back to <code>trainer.attack()</code>.</p>
+
+<p>We&rsquo;ll have the HP bar diminish by shortening its width. Its original width is 100px so we can just use the percentage of HP left as the new width of the HP bar.</p>
+
+<pre><code class="language-javascript">var hp = victim.hpRemaining/victim.hpTotal*100;
+</code></pre>
+
+<p>Now that we have the new width of the HP bar, we&rsquo;ll <em>animate</em> it using jQuery. We&rsquo;ll use the <code>animate()</code> function, which accepts a list of properties that needs to be changed. We&rsquo;ll be putting in th <em>final state</em> that we want the HP bar to be in:</p>
+
+<pre><code class="language-javascript">victim.hpBar.animate({'width': hp + 'px'});
+</code></pre>
+
+<p>But it&rsquo;s not enough that we set the HP to a certain width. In Pokemon, the color changes as well depending on how much HP is left, so let&rsquo;s do that:</p>
+
+<pre><code class="language-javascript">if(hp &lt; 30){
+  victim.hpBar.animate({'width': hp + 'px', 'background-color': '#f85828'}); // red
+}
+
+else if(hp &lt; 60){
+  victim.hpBar.animate({'width': hp + 'px', 'background-color': '#f8b000'}); // orange
+}
+
+else {
+  victim.hpBar.animate({'width': hp + 'px', 'background-color': '#18c020'}); // green
+}
+},
+</code></pre>
+
+<p>Whew! That&rsquo;s a lot of code. Just to check, here&rsquo;s what your code should look like at this point:</p>
+
+<p><code>trainer.attack()</code>:</p>
+
+<pre><code class="language-javascript">var trainer = {
+  ...
+
+  attack: function(victim, dmg){
+    victim.hpRemaining = victim.hpRemaining - dmg;
+    if(victim.hpRemaining &lt; 0){
+      victim.hpRemaining = 0;
+    }
+
+    var hp = victim.hpRemaining/victim.hpTotal*100;
+
+    if(hp &lt; 30){
+      victim.hpBar.animate({'width': hp + 'px', 'background-color': '#f85828'}); // red
+    }
+
+    else if(hp &lt; 60){
+      victim.hpBar.animate({'width': hp + 'px', 'background-color': '#f8b000'}); // orange
+    }
+
+    else {
+      victim.hpBar.animate({'width': hp + 'px', 'background-color': '#18c020'}); // red
+    }
+  },
+}
+</code></pre>
+
+<p><code>click()</code> event:</p>
+
+<pre><code class="language-javascript">fight.move1.img.click(function(){
+  playerAttack(opponent, trainer.move1.damage);
+  trainer.move1.remaining--;
+  fight.move1.pp.html(trainer.move1.remaining + '/' + trainer.move1.total);
+});
+
+</code></pre>
+
+<p>and <code>playerAttack()</code>:</p>
+
+<pre><code class="language-javascript">function playerAttack(opponent, damage) {
+  trainer.attack(opponent, damage);
+}
+</code></pre>
+
+<p>Reload the page and attack your opponent!</p>
+
+<h2 id="it-s-super-effective:51edb0bb45e55ba24d5b8a75643e295b">&hellip; It&rsquo;s super effective!</h2>
+
+<p>Let&rsquo;s add some more animations. Why don&rsquo;t we try changing the text in the dialogue box?</p>
+
+<p>First we need to be able to select the element. By now you should be a pro at this so this is easy.</p>
+
+<pre><code class="language-javascript">var dialogue = $('#battle-text');
+</code></pre>
+
+<p>Let&rsquo;s change the dialogue in <code>playerAttack()</code>:</p>
+
+<pre><code class="language-javascript">if(opponent.hpRemaining &lt;= 0){
+  dialogue.html(opponent.name.html() + ' fainted!');
+}
+
+else {
+  dialogue.html(opponent.name.html() + ' received ' + damage + ' damage!');
+}
+</code></pre>
+
+<p>Meh, pretty straightforward so this is probably boring for you. So why don&rsquo;t we have the opponent have a <code>hurt</code> animation whenever it&rsquo;s hit? We can use that using jQuery UI&rsquo;s built-in goodies: the <code>effect()</code> method.</p>
+
+<p>In the <code>opponent</code> object add:</p>
+
+<pre><code class="language-javascript">hurtAnimation: function() {
+  this.sprite.effect('shake');
+},
+</code></pre>
+
+<p>While we&rsquo;re at it, let&rsquo;s make it disappear when its HP reaches zero. We&rsquo;ll use another one of jQuery&rsquo;s goodies called the <code>fadeOut()</code> method. You can set how fast the sprite disappears; I&rsquo;ll use <code>slow</code> so that we can savor the victory.</p>
+
+<pre><code class="language-javascript">faintedAnimation: function() {
+  this.sprite.fadeOut(&quot;slow&quot;);
+}
+</code></pre>
+
+<p>Lastly, we&rsquo;ll have our pokemon do a victory pose when the opponent&rsquo;s HP reaches zero. (N-not because we&rsquo;re happy to make pokemon faint or anything! Let&rsquo;s not be sadists here.)</p>
+
+<p>There are additional sprite assets we can use, so let&rsquo;s just change the sprite image. Luckily we&rsquo;ve already saved the path for this before in <code>trainer.altImg</code>.</p>
+
+<pre><code class="language-javascript">victoryAnimation: function(){
+  this.sprite.attr('src', this.altImg);
+}
+</code></pre>
+
+<p>Call these new functions in our <code>playerAttack()</code>, like so:</p>
+
+<pre><code class="language-javascript">function playerAttack(opponent, damage) {
+  opponent.hurtAnimation();
+  trainer.attack(opponent, damage);
+
+  if(opponent.hpRemaining &lt;= 0){
+    dialogue.html(opponent.name.html() + ' fainted!');
+    opponent.faintedAnimation();
+    switchToMenu();
+    trainer.victoryAnimation();
+  }
+
+  else {
+    dialogue.html(opponent.name.html() + ' received ' + damage + ' damage!');
+  }
+}
+</code></pre>
+
+<p>And lastly, let&rsquo;s wrap this up by doing the other moves as well.</p>
+
+<pre><code class="language-javascript">fight.move2.img.click(function(){
+  playerAttack(opponent, trainer.move2.damage);
+  trainer.move2.remaining--;
+  fight.move2.pp.html(trainer.move2.remaining + '/' + trainer.move2.total);
+});
+
+fight.move3.img.click(function(){
+  playerAttack(opponent, trainer.move3.damage);
+  trainer.move3.remaining--;
+  fight.move3.pp.html(trainer.move3.remaining + '/' + trainer.move3.total);
+});
+
+fight.move4.img.click(function(){
+  playerAttack(opponent, trainer.move4.damage);
+  trainer.move4.remaining--;
+  fight.move4.pp.html(trainer.move4.remaining + '/' + trainer.move4.total);
+});
+</code></pre>
+
+<p>Reload the page. Now you can mercilessly attack a Ratata at your will, and even have your pokemon do a victory pose! Good job!</p>
+
+<h1 id="final-notes:51edb0bb45e55ba24d5b8a75643e295b">Final Notes</h1>
+
+<p>Whew! We&rsquo;ve finally reached the end!. We&rsquo;ve gone from printing a simple &ldquo;Hello World!&rdquo; in the console to making our very own Pokemon game! This was a lot to take in. If you made it this far, kudos! You&rsquo;ve done a <em>very</em> good job. Now step away from the screen and rest for a while. :P</p>
+
+<p>We&rsquo;ve only <em>barely</em> scratched the surface of the magic that is javascript. There are so <em>so</em> many more things that javascript can do and landscape for javascript is still evolving, but I&rsquo;ll leave it to you to discover them. From here on you can use javascript in so many ways - from client-side to server-side programming; backend to frontend; and yes, even in game development! (Check out phaserJS for gamedev javasript).</p>
+
+<p>Have fun coding!</p>
+</article></div> </div><footer><p>Made with <span class="color-pink">Love</span> &copy; UP CSI</p></footer> <script src="/js/vendor.bundle.js"></script><script src="/js/main.bundle.js"></script> <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', "UA-69207349-1", 'auto');
+  ga('send', 'pageview');
+</script> </body></html>
